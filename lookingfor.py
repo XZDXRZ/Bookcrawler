@@ -22,7 +22,7 @@ for i in url:
     page.encoding = 'utf-8'
     soup = BeautifulSoup(page.text, 'lxml')
     title = soup.find('h1').text
-	#f = open('./寻找走丢的舰娘/'+title+".txt",'w',encoding = 'utf-8')
+    #f = open('./寻找走丢的舰娘/'+title+".txt",'w',encoding = 'utf-8')
     f.write(title+'\n')
     article = soup.find('div', class_ = 'showtxt').text
     print(title,end = ' ')
